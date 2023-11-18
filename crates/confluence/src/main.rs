@@ -31,10 +31,10 @@ async fn main() {
 
     dotenvy::dotenv().ok();
 
-    let db_url = env::var("DATABASE_URL").expect("DATABASE_URL is not set in env");
-    let issuer = env::var("ISSUER").expect("ISSUER is not set in env");
-    let jwks_uri = env::var("JWKS_URI").expect("JWKS_URI is not set in env");
-    let audience = env::var("AUDIENCE").expect("AUDIENCE is not set in env");
+    let db_url = env::var("CONFLUENCE_DATABASE_URL").expect("CONFLUENCE_DATABASE_URL is not set in env");
+    let issuer = env::var("AUTH_ISSUER").expect("AUTH_ISSUER is not set in env");
+    let jwks_uri = env::var("AUTH_JWKS_URI").expect("AUTH_JWKS_URI is not set in env");
+    let audience = env::var("CONFLUENCE_AUDIENCE").expect("CONFLUENCE_AUDIENCE is not set in env");
 
     let conn = Database::connect(db_url)
         .await

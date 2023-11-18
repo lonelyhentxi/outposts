@@ -1,0 +1,14 @@
+{
+  "name": "outposts",
+  "version": "0.0.0",
+  "description": "outposts",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lonelyhentxi/outposts.git"
+  },
+  "private": true
+}
